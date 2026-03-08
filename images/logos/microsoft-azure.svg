@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <rect width="60" height="60" rx="12" fill="#f0f7ff"/>
+  <g transform="translate(9, 9) scale(1.75)">
+    <!-- Left face of the Azure "A" shape -->
+    <path d="M7.5 22.4H1.8a.57.57 0 0 1-.51-.82L9.75 3.8a.57.57 0 0 1 1.05.02l2.3 5.4-5.15 7.65a.57.57 0 0 0 .44.92h5.1L7.5 22.4z" fill="#0078D4"/>
+    <!-- Right face of the Azure "A" shape -->
+    <path d="M22.4 22.4H8.2c-.47 0-.73-.55-.43-.92l9.8-11.55-4.1-8.83c-.15-.32.08-.68.44-.68h3.9c.23 0 .44.14.54.36l5.6 13.1a.57.57 0 0 1 .01.44L22.93 22a.57.57 0 0 1-.53.4z" fill="#0078D4"/>
+  </g>
+</svg>
