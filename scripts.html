@@ -187,6 +187,24 @@
             cursor: pointer; transition: all 0.2s;
         }
         .code-copy-btn:hover { color: #e2e8f0; border-color: #64748b; }
+        /* ── Source badges ── */
+        .source-badge {
+            font-size: 0.68rem; font-weight: 700; padding: 2px 9px;
+            border-radius: 4px; margin-bottom: 6px; display: inline-block;
+        }
+        .source-ihccc { background: #dcfce7; color: #166534; }
+        .source-community { background: #dbeafe; color: #1d4ed8; }
+
+        /* ── Open source link ── */
+        .script-action-outline {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 16px; background: transparent; color: #0d47a1;
+            border: 1.5px solid #0d47a1; border-radius: 8px;
+            font-size: 0.82rem; font-weight: 600; transition: all 0.2s;
+        }
+        .script-action-outline:hover { background: #eff6ff; }
+        .script-footer-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
         .code-content {
             padding: 14px;
             overflow-x: auto;
@@ -326,12 +344,12 @@
         <div class="container">
             <div class="hero-badge">🔧 开源 · 免费 · 实战可用</div>
             <h1>安全加固脚本库</h1>
-            <p>IHCCC整理并发布的安全实施与合规检测自动化脚本，覆盖Linux、Windows、Docker、Kubernetes、数据库等主流平台，基于CIS安全基准与等保2.0标准，可直接用于生产环境安全加固与合规评估。</p>
+            <p>本页汇集 IHCCC 自研脚本与社区优秀开源工具，覆盖 Linux、Windows、Docker、Kubernetes、数据库等主流平台，基于 CIS 安全基准与等保2.0 标准。每项脚本均附有介绍说明与开源地址，开箱即用，免费共享。</p>
             <div class="hero-stats">
-                <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-label">可用脚本</div></div>
-                <div class="hero-stat"><div class="hero-stat-num">10</div><div class="hero-stat-label">技术平台</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">60+</div><div class="hero-stat-label">收录脚本</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">12</div><div class="hero-stat-label">技术平台</div></div>
                 <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">开源免费</div></div>
-                <div class="hero-stat"><div class="hero-stat-num">中文</div><div class="hero-stat-label">注释说明</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">双源</div><div class="hero-stat-label">IHCCC+社区</div></div>
             </div>
         </div>
     </section>
@@ -351,9 +369,28 @@
                 <button class="filter-btn"         data-filter="log"     aria-pressed="false">📊 日志审计</button>
                 <button class="filter-btn"         data-filter="ansible" aria-pressed="false">🤖 自动化</button>
                 <button class="filter-btn"         data-filter="djbh"    aria-pressed="false">🔒 等保合规</button>
+                <button class="filter-btn"         data-filter="community" aria-pressed="false">🌐 社区推荐</button>
             </div>
         </div>
     </div>
+
+    <!-- 关于本脚本库 -->
+    <section style="background:#eff6ff;border-bottom:1px solid #bfdbfe;padding:20px 0;">
+        <div class="container">
+            <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="flex:1;min-width:240px;">
+                    <p style="font-size:0.92rem;color:#1e40af;margin:0;line-height:1.8;">
+                        <strong>📦 关于本脚本库：</strong>本库分为两类来源。<br>
+                        <span style="background:#dcfce7;color:#166534;font-weight:700;padding:1px 7px;border-radius:4px;font-size:0.78rem;">🏠 IHCCC 原创</span>
+                        &nbsp;— IHCCC 自研脚本，含中文注释，可在 <a href="https://github.com/mzwrt/ihccc" target="_blank" style="color:#1d4ed8;">github.com/mzwrt/ihccc</a> 获取完整代码。<br>
+                        <span style="background:#dbeafe;color:#1d4ed8;font-weight:700;padding:1px 7px;border-radius:4px;font-size:0.78rem;">🌐 社区推荐</span>
+                        &nbsp;— 来自开源社区的优秀工具，每项均附官方开源地址，点击卡片上的"🔗 开源地址"即可直达。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 快速开始 -->
     <section class="page-content alt-bg">
         <div class="container">
@@ -456,7 +493,7 @@
                 <article class="script-card" data-category="linux">
                     <div class="script-card-header">
                         <div class="script-icon">🛡️</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Ubuntu Linux 安全加固脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -506,14 +543,14 @@
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约200行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="linux">
                     <div class="script-card-header">
                         <div class="script-icon">🔍</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Linux 安全合规审计脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-python">Python3</span>
@@ -567,14 +604,14 @@ print(f<span class="code-str">"合规检查完成: {passed}/{len(results)} 项�
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐⭐ 高级 · 约400行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="linux">
                     <div class="script-card-header">
                         <div class="script-icon">📋</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>等保2.0 Linux 自检脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -626,7 +663,95 @@ echo <span class="code-str">"汇总：通过 $PASS | 失败 $FAIL | 警告 $WARN
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约350行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
+                    </div>
+                </article>
+
+
+                <article class="script-card" data-category="linux community">
+                    <div class="script-card-header">
+                        <div class="script-icon">🔍</div>
+                        <div class="script-meta">
+                            <span class="source-badge source-community">🌐 社区推荐</span>
+                            <h3>Lynis — Linux 系统安全审计框架</h3>
+                            <div class="script-tags">
+                                <span class="script-tag tag-shell">Shell</span>
+                                <span class="script-tag tag-linux">全平台Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-body">
+                        <p>CISOfy 开发的开源安态安全审计与加固建议工具，拥有 15,000+ GitHub Star。无需安装依赖，直接扫描本地系统，覆盖 600+ 安全检查项，支持 CIS 基准映射，输出详细审计报告与整改建议，适用于 Linux/macOS/BSD。</p>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span class="code-lang">Shell · 快速使用</span>
+                                <button class="code-copy-btn" onclick="copyCode(this, 'lynis-code')">复制</button>
+                            </div>
+                            <div class="code-content">
+                                <pre id="lynis-code"><span class="code-comment"># 克隆并运行 Lynis 系统审计</span>
+<span class="code-cmd">git</span> clone https://github.com/CISOfy/lynis
+<span class="code-cmd">cd</span> lynis
+
+<span class="code-comment"># 完整系统安全审计</span>
+<span class="code-cmd">sudo</span> ./lynis audit system
+
+<span class="code-comment"># 只检测、不修改（推荐首次运行）</span>
+<span class="code-cmd">sudo</span> ./lynis audit system <span class="code-flag">--no-colors --quiet</span>
+
+<span class="code-comment"># 查看审计报告</span>
+<span class="code-cmd">cat</span> /var/log/lynis.log</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-footer">
+                        <span class="script-complexity">⭐ 15k+ Stars · Shell · 跨平台</span>
+                        <div class="script-footer-actions">
+                            <a href="https://github.com/CISOfy/lynis" target="_blank" rel="noopener noreferrer" class="script-action-outline">🔗 开源地址</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="script-card" data-category="linux community">
+                    <div class="script-card-header">
+                        <div class="script-icon">🛡️</div>
+                        <div class="script-meta">
+                            <span class="source-badge source-community">🌐 社区推荐</span>
+                            <h3>AIDE — 文件完整性检测工具</h3>
+                            <div class="script-tags">
+                                <span class="script-tag tag-shell">Bash</span>
+                                <span class="script-tag tag-linux">文件完整性</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-body">
+                        <p>Advanced Intrusion Detection Environment（AIDE）是经典的开源文件完整性监测工具，可检测系统关键文件（/bin、/sbin、/etc）是否被篡改，常用于等保2.0入侵防范检测项。初始化基准数据库后，定期运行对比即可发现异常变更。</p>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span class="code-lang">Bash · AIDE 使用</span>
+                                <button class="code-copy-btn" onclick="copyCode(this, 'aide-code')">复制</button>
+                            </div>
+                            <div class="code-content">
+                                <pre id="aide-code"><span class="code-comment"># 安装 AIDE</span>
+<span class="code-cmd">apt install</span> aide  <span class="code-comment"># Debian/Ubuntu</span>
+<span class="code-cmd">yum install</span> aide  <span class="code-comment"># RHEL/CentOS</span>
+
+<span class="code-comment"># 初始化基准数据库（首次）</span>
+<span class="code-cmd">sudo</span> aideinit
+<span class="code-cmd">sudo</span> mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+
+<span class="code-comment"># 检查文件完整性（与基准对比）</span>
+<span class="code-cmd">sudo</span> aide --check
+
+<span class="code-comment"># 更新基准（确认变更合法后）</span>
+<span class="code-cmd">sudo</span> aide --update</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-footer">
+                        <span class="script-complexity">⭐ 等保2.0 必备 · C语言</span>
+                        <div class="script-footer-actions">
+                            <a href="https://github.com/aide/aide" target="_blank" rel="noopener noreferrer" class="script-action-outline">🔗 开源地址</a>
+                        </div>
                     </div>
                 </article>
 
@@ -643,7 +768,7 @@ echo <span class="code-str">"汇总：通过 $PASS | 失败 $FAIL | 警告 $WARN
                 <article class="script-card" data-category="windows">
                     <div class="script-card-header">
                         <div class="script-icon">🔒</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Windows Server 安全加固脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-powershell">PowerShell</span>
@@ -695,14 +820,14 @@ auditpol /set /category:<span class="code-str">"Account Management"</span> /succ
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约250行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="windows">
                     <div class="script-card-header">
                         <div class="script-icon">📊</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Windows 安全基线检测报告</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-powershell">PowerShell</span>
@@ -752,7 +877,58 @@ $report | Export-Csv <span class="code-str">"cis-report-$(Get-Date -f yyyyMMdd).
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约300行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
+                    </div>
+                </article>
+
+
+                <article class="script-card" data-category="windows community">
+                    <div class="script-card-header">
+                        <div class="script-icon">🪟</div>
+                        <div class="script-meta">
+                            <span class="source-badge source-community">🌐 社区推荐</span>
+                            <h3>PowerStig — 微软官方 STIG/CIS 合规基线工具</h3>
+                            <div class="script-tags">
+                                <span class="script-tag tag-powershell">PowerShell DSC</span>
+                                <span class="script-tag tag-windows">Windows</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-body">
+                        <p>Microsoft 开源的 Windows 安全合规自动化框架，基于 PowerShell DSC（期望状态配置），自动将 STIG/CIS 安全基线应用到 Windows 系统。支持 Windows Server 2019/2022、SQL Server、IIS、DNS、Office 等多个组件的合规配置。</p>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span class="code-lang">PowerShell · 快速使用</span>
+                                <button class="code-copy-btn" onclick="copyCode(this, 'powerstig-code')">复制</button>
+                            </div>
+                            <div class="code-content">
+                                <pre id="powerstig-code"><span class="code-comment"># 安装 PowerStig 模块</span>
+Install-Module PowerStig <span class="code-flag">-Force</span>
+
+<span class="code-comment"># 查看支持的 STIG 列表</span>
+Get-StigList
+
+<span class="code-comment"># 应用 Windows Server 2022 STIG 基线</span>
+<span class="code-cmd">Import-Module</span> PowerStig
+Configuration WindowsServerBaseline {
+    Import-DscResource -ModuleName PowerStig
+    Node localhost {
+        WindowsServer WS2022 {
+            OsVersion   = <span class="code-str">'2022'</span>
+            StigVersion = <span class="code-str">'3.2'</span>
+        }
+    }
+}
+WindowsServerBaseline -OutputPath C:\dsc
+Start-DscConfiguration <span class="code-flag">-Path</span> C:\dsc <span class="code-flag">-Wait -Verbose</span></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-footer">
+                        <span class="script-complexity">⭐ 微软官方 · PowerShell DSC</span>
+                        <div class="script-footer-actions">
+                            <a href="https://github.com/microsoft/PowerStig" target="_blank" rel="noopener noreferrer" class="script-action-outline">🔗 开源地址</a>
+                        </div>
                     </div>
                 </article>
 
@@ -769,7 +945,7 @@ $report | Export-Csv <span class="code-str">"cis-report-$(Get-Date -f yyyyMMdd).
                 <article class="script-card" data-category="docker">
                     <div class="script-card-header">
                         <div class="script-icon">🐳</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Docker 安全审计脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -826,14 +1002,14 @@ echo <span class="code-str">"汇总: 通过 $PASS | 失败 $FAIL"</span></pre>
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约180行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="docker">
                     <div class="script-card-header">
                         <div class="script-icon">⚙️</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Kubernetes CIS 合规检测</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -886,7 +1062,7 @@ echo <span class="code-str">"[✓] 报告已保存至: $REPORT_DIR"</span></pre>
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐⭐ 高级 · 约150行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
@@ -903,7 +1079,7 @@ echo <span class="code-str">"[✓] 报告已保存至: $REPORT_DIR"</span></pre>
                 <article class="script-card" data-category="database">
                     <div class="script-card-header">
                         <div class="script-icon">🗄️</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>MySQL 8.0 安全加固脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -952,7 +1128,7 @@ echo <span class="code-str">"[✓] MySQL安全加固完成，请重启MySQL服�
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约220行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
@@ -960,7 +1136,7 @@ echo <span class="code-str">"[✓] MySQL安全加固完成，请重启MySQL服�
                 <article class="script-card" data-category="database">
                     <div class="script-card-header">
                         <div class="script-icon">🐘</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>PostgreSQL 安全加固脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -1008,14 +1184,14 @@ echo <span class="code-str">"[✓] 认证方式升级为scram-sha-256"</span></p
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约200行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="database">
                     <div class="script-card-header">
                         <div class="script-icon">🔴</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Redis 安全加固脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -1060,7 +1236,7 @@ fi</pre>
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐ 初级 · 约100行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
@@ -1077,7 +1253,7 @@ fi</pre>
                 <article class="script-card" data-category="cloud">
                     <div class="script-card-header">
                         <div class="script-icon">🔐</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>云平台安全检测脚本（AWS/阿里云）</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-python">Python3</span>
@@ -1130,7 +1306,7 @@ for r in results:
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐⭐ 高级 · 约350行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
@@ -1147,7 +1323,7 @@ for r in results:
                 <article class="script-card" data-category="ansible">
                     <div class="script-card-header">
                         <div class="script-icon">🤖</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Ansible 批量加固 Playbook</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-ansible">Ansible</span>
@@ -1206,7 +1382,7 @@ for r in results:
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐⭐ 高级 · 约500行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
@@ -1224,7 +1400,7 @@ for r in results:
                 <article class="script-card" data-category="network">
                     <div class="script-card-header">
                         <div class="script-icon">🔌</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>端口与服务安全扫描脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -1266,14 +1442,14 @@ echo <span class="code-str">"[✓] 报告已保存: $REPORT"</span></pre>
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐ 初级 · 约80行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="network">
                     <div class="script-card-header">
                         <div class="script-icon">🔥</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Linux 防火墙规则审计脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -1323,7 +1499,53 @@ echo <span class="code-str">"汇总: 发现 $ISSUES 个安全问题"</span></pre
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约120行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
+                    </div>
+                </article>
+
+
+                <article class="script-card" data-category="network community">
+                    <div class="script-card-header">
+                        <div class="script-icon">🕷️</div>
+                        <div class="script-meta">
+                            <span class="source-badge source-community">🌐 社区推荐</span>
+                            <h3>Nikto — Web 服务器安全扫描器</h3>
+                            <div class="script-tags">
+                                <span class="script-tag tag-python">Perl</span>
+                                <span class="script-tag tag-linux">Web安全</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-body">
+                        <p>经典开源 Web 服务器安全扫描工具，检测 7,000+ 已知风险文件、过时软件版本、HTTP 安全响应头缺失、SSL 配置问题等，支持 Nginx、Apache、IIS，可作为 Web 服务器定期安全基线扫描的自动化工具。</p>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span class="code-lang">Shell · Nikto 扫描</span>
+                                <button class="code-copy-btn" onclick="copyCode(this, 'nikto-code')">复制</button>
+                            </div>
+                            <div class="code-content">
+                                <pre id="nikto-code"><span class="code-comment"># 安装</span>
+<span class="code-cmd">apt install</span> nikto  <span class="code-comment"># Debian/Ubuntu</span>
+
+<span class="code-comment"># 基础扫描</span>
+<span class="code-cmd">nikto</span> -h https://example.com
+
+<span class="code-comment"># 扫描并输出 HTML 报告</span>
+<span class="code-cmd">nikto</span> -h https://example.com <span class="code-flag">-o</span> report.html <span class="code-flag">-Format</span> htm
+
+<span class="code-comment"># 扫描内网 IP</span>
+<span class="code-cmd">nikto</span> -h 192.168.1.10 <span class="code-flag">-p</span> 80,443,8080
+
+<span class="code-comment"># 仅检测 SSL 配置</span>
+<span class="code-cmd">nikto</span> -h https://example.com <span class="code-flag">-Tuning</span> 4</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-footer">
+                        <span class="script-complexity">⭐ 经典工具 · 8k+ Stars</span>
+                        <div class="script-footer-actions">
+                            <a href="https://github.com/sullo/nikto" target="_blank" rel="noopener noreferrer" class="script-action-outline">🔗 开源地址</a>
+                        </div>
                     </div>
                 </article>
 
@@ -1341,7 +1563,7 @@ echo <span class="code-str">"汇总: 发现 $ISSUES 个安全问题"</span></pre
                 <article class="script-card" data-category="vuln">
                     <div class="script-card-header">
                         <div class="script-icon">🛡️</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Linux CVE 漏洞快速检测脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -1389,14 +1611,14 @@ fi</pre>
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约200行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="vuln">
                     <div class="script-card-header">
                         <div class="script-icon">🔑</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>系统弱密码检测脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-python">Python3</span>
@@ -1450,7 +1672,100 @@ for user in get_system_users():
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约180行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
+                    </div>
+                </article>
+
+
+                <article class="script-card" data-category="vuln community">
+                    <div class="script-card-header">
+                        <div class="script-icon">⚡</div>
+                        <div class="script-meta">
+                            <span class="source-badge source-community">🌐 社区推荐</span>
+                            <h3>Nuclei — 高速漏洞扫描框架</h3>
+                            <div class="script-tags">
+                                <span class="script-tag tag-go">Go</span>
+                                <span class="script-tag tag-linux">漏洞扫描</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-body">
+                        <p>ProjectDiscovery 出品的高性能漏洞扫描框架，21,000+ GitHub Star，基于 YAML 模板驱动，社区维护 9,000+ 漏洞检测模板（CVE、错误配置、暴露信息等），支持 Web、DNS、TCP、代码等多种协议，是攻防演练和日常安全评估的利器。</p>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span class="code-lang">Shell · Nuclei 使用</span>
+                                <button class="code-copy-btn" onclick="copyCode(this, 'nuclei-code')">复制</button>
+                            </div>
+                            <div class="code-content">
+                                <pre id="nuclei-code"><span class="code-comment"># 安装 Nuclei</span>
+<span class="code-cmd">go</span> install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+<span class="code-comment"># 或使用预编译二进制</span>
+
+<span class="code-comment"># 更新模板库</span>
+<span class="code-cmd">nuclei</span> -update-templates
+
+<span class="code-comment"># 扫描单个目标</span>
+<span class="code-cmd">nuclei</span> -u https://example.com
+
+<span class="code-comment"># 只扫描 CVE 漏洞</span>
+<span class="code-cmd">nuclei</span> -u https://example.com <span class="code-flag">-tags</span> cve
+
+<span class="code-comment"># 批量扫描（从文件读取目标列表）</span>
+<span class="code-cmd">nuclei</span> <span class="code-flag">-list</span> targets.txt <span class="code-flag">-severity</span> critical,high</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-footer">
+                        <span class="script-complexity">⭐ 21k+ Stars · ProjectDiscovery</span>
+                        <div class="script-footer-actions">
+                            <a href="https://github.com/projectdiscovery/nuclei" target="_blank" rel="noopener noreferrer" class="script-action-outline">🔗 开源地址</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="script-card" data-category="vuln community">
+                    <div class="script-card-header">
+                        <div class="script-icon">🔑</div>
+                        <div class="script-meta">
+                            <span class="source-badge source-community">🌐 社区推荐</span>
+                            <h3>Gitleaks — Git 仓库密钥泄露检测</h3>
+                            <div class="script-tags">
+                                <span class="script-tag tag-go">Go</span>
+                                <span class="script-tag tag-linux">密钥扫描</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-body">
+                        <p>专为检测 Git 仓库中误提交的密钥、Token、密码等敏感信息而设计，17,000+ GitHub Star。支持扫描整个 commit 历史，可集成到 pre-commit 钩子或 CI/CD 流水线，支持 AWS Key、GitHub Token、私钥等 150+ 密钥类型的正则检测规则。</p>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span class="code-lang">Shell · Gitleaks 使用</span>
+                                <button class="code-copy-btn" onclick="copyCode(this, 'gitleaks-code')">复制</button>
+                            </div>
+                            <div class="code-content">
+                                <pre id="gitleaks-code"><span class="code-comment"># 安装（macOS/Linux）</span>
+<span class="code-cmd">brew</span> install gitleaks
+<span class="code-comment"># 或下载二进制: github.com/gitleaks/gitleaks/releases</span>
+
+<span class="code-comment"># 扫描当前 Git 仓库（含完整历史）</span>
+<span class="code-cmd">gitleaks</span> detect <span class="code-flag">--source</span> .
+
+<span class="code-comment"># 扫描指定目录</span>
+<span class="code-cmd">gitleaks</span> detect <span class="code-flag">--source</span> /path/to/repo
+
+<span class="code-comment"># 集成到 pre-commit（防止带密钥的提交）</span>
+<span class="code-cmd">gitleaks</span> protect <span class="code-flag">--staged</span>
+
+<span class="code-comment"># 输出 JSON 报告</span>
+<span class="code-cmd">gitleaks</span> detect <span class="code-flag">--report-format</span> json <span class="code-flag">-r</span> report.json</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-footer">
+                        <span class="script-complexity">⭐ 17k+ Stars · CI/CD 友好</span>
+                        <div class="script-footer-actions">
+                            <a href="https://github.com/gitleaks/gitleaks" target="_blank" rel="noopener noreferrer" class="script-action-outline">🔗 开源地址</a>
+                        </div>
                     </div>
                 </article>
 
@@ -1468,7 +1783,7 @@ for user in get_system_users():
                 <article class="script-card" data-category="log">
                     <div class="script-card-header">
                         <div class="script-icon">🔎</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>SSH 暴力破解检测脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -1510,14 +1825,14 @@ echo <span class="code-str">"=== 超过阈值($THRESHOLD次)的攻击IP ==="</sp
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐ 初级 · 约100行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="log">
                     <div class="script-card-header">
                         <div class="script-icon">📈</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>Web 访问日志安全分析脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-python">Python3</span>
@@ -1571,7 +1886,59 @@ for key, count in results.most_common(20):
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约250行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
+                    </div>
+                </article>
+
+
+                <article class="script-card" data-category="log community">
+                    <div class="script-card-header">
+                        <div class="script-icon">🚫</div>
+                        <div class="script-meta">
+                            <span class="source-badge source-community">🌐 社区推荐</span>
+                            <h3>Fail2ban — 日志驱动的入侵防护系统</h3>
+                            <div class="script-tags">
+                                <span class="script-tag tag-python">Python</span>
+                                <span class="script-tag tag-linux">入侵防护</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-body">
+                        <p>经典开源入侵防护工具，10,000+ GitHub Star。实时扫描 SSH、Apache、Nginx 等服务日志，检测暴力破解行为并自动添加 iptables/firewalld 封锁规则，可设置封锁时间和失败阈值，是等保2.0 入侵防范控制域的实用落地工具。</p>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span class="code-lang">Shell · Fail2ban 配置</span>
+                                <button class="code-copy-btn" onclick="copyCode(this, 'fail2ban-code')">复制</button>
+                            </div>
+                            <div class="code-content">
+                                <pre id="fail2ban-code"><span class="code-comment"># 安装</span>
+<span class="code-cmd">apt install</span> fail2ban    <span class="code-comment"># Debian/Ubuntu</span>
+<span class="code-cmd">yum install</span> fail2ban    <span class="code-comment"># RHEL/CentOS</span>
+
+<span class="code-comment"># /etc/fail2ban/jail.local 关键配置</span>
+[DEFAULT]
+bantime  = 3600      <span class="code-comment"># 封锁1小时</span>
+findtime = 600       <span class="code-comment"># 10分钟内</span>
+maxretry = 5         <span class="code-comment"># 超过5次触发封锁</span>
+
+[sshd]
+enabled = true
+port    = ssh
+logpath = /var/log/auth.log
+
+<span class="code-comment"># 查看当前封锁状态</span>
+<span class="code-cmd">fail2ban-client</span> status sshd
+
+<span class="code-comment"># 手动解封 IP</span>
+<span class="code-cmd">fail2ban-client</span> set sshd unbanip 1.2.3.4</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="script-footer">
+                        <span class="script-complexity">⭐ 10k+ Stars · 等保2.0 推荐</span>
+                        <div class="script-footer-actions">
+                            <a href="https://github.com/fail2ban/fail2ban" target="_blank" rel="noopener noreferrer" class="script-action-outline">🔗 开源地址</a>
+                        </div>
                     </div>
                 </article>
 
@@ -1589,7 +1956,7 @@ for key, count in results.most_common(20):
                 <article class="script-card" data-category="djbh">
                     <div class="script-card-header">
                         <div class="script-icon">📋</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>等保2.0 三级 综合检测脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-shell">Bash</span>
@@ -1642,14 +2009,14 @@ echo <span class="code-str">"报告: $REPORT"</span></pre>
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约400行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
                 <article class="script-card" data-category="djbh">
                     <div class="script-card-header">
                         <div class="script-icon">📄</div>
-                        <div class="script-meta">
+                        <div class="script-meta"><span class="source-badge source-ihccc">🏠 IHCCC 原创</span>
                             <h3>等保2.0 Windows 自检脚本</h3>
                             <div class="script-tags">
                                 <span class="script-tag tag-powershell">PowerShell</span>
@@ -1704,7 +2071,7 @@ Write-Host <span class="code-str">"合规率: $pass/$($results.Count)"</span></p
                     </div>
                     <div class="script-footer">
                         <span class="script-complexity">难度：⭐⭐ 中级 · 约300行</span>
-                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 获取完整脚本</a>
+                        <a href="https://github.com/mzwrt/ihccc/tree/main/scripts" target="_blank" rel="noopener noreferrer" class="script-action">📥 IHCCC 完整脚本</a>
                     </div>
                 </article>
 
@@ -1831,7 +2198,8 @@ Write-Host <span class="code-str">"合规率: $pass/$($results.Count)"</span></p
                 allSections.forEach(function(s) { s.style.display = ''; });
             } else {
                 allCards.forEach(function(c) {
-                    c.style.display = (c.dataset.category === filter) ? '' : 'none';
+                    var cats = (c.dataset.category || '').split(' ');
+                    c.style.display = cats.indexOf(filter) !== -1 ? '' : 'none';
                 });
                 allSections.forEach(function(s) {
                     var hasVisible = Array.from(s.querySelectorAll('.script-card')).some(function(c) {
